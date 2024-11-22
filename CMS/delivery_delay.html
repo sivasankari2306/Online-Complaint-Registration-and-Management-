@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Delivery Delays</title>
+    <style>
+        body{
+                
+                background-color:darkgray;
+            }
+            .area {
+                display: grid;
+                margin-left: 465px;
+                margin-top: 30px;
+                height: 300px;
+                width: 500px;
+                border-radius: 10px;
+            }
+            .area1 {
+                display: grid;
+            }
+            .buttonsize {
+                margin-top: 30px;
+                margin-left: 650px;
+                height: 40px;
+                width: 120px;
+                border-radius: 5px;
+            }
+            .header{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                background-color:lightgray;
+                display:flex;
+                justify-content: space-between;
+            }
+            .header a{
+                text-decoration: none;
+                font-size: 20px;
+                padding-top: 30px;
+                padding-right: 60px;
+                flex-grow: 1;
+            }
+            a:hover{
+                color:blue;
+            }
+            .header h1{
+               
+                font-weight: 700;
+                flex-grow: 8;
+                padding-left:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>COMPLAINT MANAGEMENT SYSTEM</h1>
+            <a href="">PROFILE</a>
+            <a href="cms_user_dashboard.html">CATEGORY</a>
+            </div>
+        <br>
+        <br> 
+    <center><h3>Reporting Complaint on Delivery Delays</h3></center>
+    <div class="area1">
+        <textarea id="complaintText" class="area" placeholder="Write your Complaint"></textarea>
+        <button class="buttonsize" onclick="submitComplaint()">Submit Complaint</button>
+    </div>
+
+    <script>
+        function submitComplaint() {
+            // Retrieve the value of the textarea
+            var complaint = document.getElementById("complaintText").value;
+            
+            // Check if complaint is not empty
+            if (complaint.trim() !== "") {
+                // Store the complaint in local storage
+                localStorage.setItem("delivery_delay_complaint", complaint);
+                
+                // Alert the user that the complaint has been submitted
+                alert("Complaint submitted successfully!");
+            } else {
+                // Alert the user if the textarea is empty
+                alert("Please write your complaint before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>

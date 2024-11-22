@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fetch return exchange complaint</title>
+    <title>Fetch Delivery Issues</title>
 </head>
 <body>
-    <button onclick="fetchComplaint()">Fetch return exchange complaint</button>
+    <div class="header">
+        <h1>COMPLAINT MANAGEMENT SYSTEM</h1>
+    </div>
+
+    <button onclick="fetchComplaint()" style="margin-top: 100px; margin-left: 500px;">Fetch Delivery Issues</button>
     <p id="complaintDisplay"></p>
     
     <script>
         function fetchComplaint() {
             // Retrieve the saved complaint from local storage
-            var savedComplaint = localStorage.getItem("return_exchange_complaint");
+            var savedComplaint = localStorage.getItem("delivery_issue_complaint");
             
             // Check if a complaint is saved
             if (savedComplaint) {
@@ -20,7 +24,7 @@
                 document.getElementById("complaintDisplay").textContent = savedComplaint;
             } else {
                 // If no complaint is saved, display a message
-                document.getElementById("complaintDisplay").textContent = "No return exchange complaint saved.";
+                document.getElementById("complaintDisplay").textContent = "No delivery issues complaints saved.";
             }
         }
     </script>

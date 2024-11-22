@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS-User Registration</title>
+    <style>
+        body{
+           background-color:darkgray;
+         
+        }
+        h2{
+            padding-top:50px ;
+        }
+        .Form {
+            display: grid;
+            justify-content: center;
+            margin-top: 150px;
+            grid-template-columns: 300px;
+            grid-template-rows: 30px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Welcome To Complaint Management System</h2>
+    <h2 align="center">User Registration</h2>
+
+    <div class="Form">
+        NAME <input type="text">
+       <br>
+       EMAIL ID <input type="email">
+       <br>
+       PASSWORD <input type="password">
+       <br>
+       PROFFESSION <select name="PROFFESSION">
+       <option value="student">STUDENT</option>
+       <option value="teacher">TEACHER</option>
+       <option value="employee">EMPLOYEE</option>
+       <option value="other">OTHERS</option>
+       </select>
+       <br>
+       STATE<select>
+           <option value="AP">Andhra Pradesh</option>
+           <option value="AR">Arunachal Pradesh</option>
+           <option value="AS">Assam</option>
+           <option value="BR">Bihar</option>
+           <option value="CT">Chhattisgarh</option>
+           <option value="GA">Gujarat</option>
+           <option value="HR">Haryana</option>
+           <option value="HP">Himachal Pradesh</option>
+           <option value="JK">Jammu and Kashmir</option>
+           <option value="GA">Goa</option>
+           <option value="JH">Jharkhand</option>
+           <option value="KA">Karnataka</option>
+           <option value="KL">Kerala</option>
+           <option value="MP">Madhya Pradesh</option>
+           <option value="MH">Maharashtra</option>
+           <option value="MN">Manipur</option>
+           <option value="ML">Meghalaya</option>
+           <option value="MZ">Mizoram</option>
+           <option value="NL">Nagaland</option>
+           <option value="OR">Odisha</option>
+           <option value="PB">Punjab</option>
+           <option value="RJ">Rajasthan</option>
+           <option value="SK">Sikkim</option>
+           <option value="TN">Tamil Nadu</option>
+           <option value="TG">Telangana</option>
+           <option value="TR">Tripura</option>
+           <option value="UT">Uttarakhand</option>
+           <option value="UP">Uttar Pradesh</option>
+           <option value="WB">West Bengal</option>
+           <option value="AN">Andaman and Nicobar Islands</option>
+           <option value="CH">Chandigarh</option>
+           <option value="DN">Dadra and Nagar Haveli</option>
+           <option value="DD">Daman and Diu</option>
+           <option value="DL">Delhi</option>
+           <option value="LD">Lakshadweep</option>
+           <option value="PY">Puducherry</option>
+       </select>
+       <br>
+       <button>Sign Up</button>
+
+   </div>
+   
+    <script>
+        function login() {
+            // Retrieve username and password values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are correct
+            if (username === "user1" && password === "user123") {
+                // Redirect to the trial.html page
+                window.location.href = "cms_user_dashboard.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+        function adminlogin()
+        {
+            window.location.href="./admin_panel.html";
+        }
+    </script>
+</body>
+</html>
+

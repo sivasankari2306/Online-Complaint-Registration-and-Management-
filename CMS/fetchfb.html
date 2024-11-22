@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Feedback</title>
+</head>
+<body>
+    <div class="header">
+        <h1>COMPLAINT MANAGEMENT SYSTEM</h1>
+    </div>
+
+    <button onclick="fetchFeedback()" style="margin-top: 100px; margin-left: 500px;">Fetch Feedback</button>
+    <p id="feedbackDisplay"></p>
+    
+    <script>
+        function fetchFeedback() {
+            // Retrieve the saved feedback from local storage
+            var savedFeedback = localStorage.getItem("feedback");
+            
+            // Check if feedback is saved
+            if (savedFeedback) {
+                // Display the saved feedback
+                document.getElementById("feedbackDisplay").textContent = savedFeedback;
+            } else {
+                // If no feedback is saved, display a message
+                document.getElementById("feedbackDisplay").textContent = "No feedback saved.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS-User Login</title>
+    <style>
+        body{
+           background-color:darkgray;
+         
+        }
+        h2{
+            padding-top:50px ;
+        }
+        .Form {
+            display: grid;
+            justify-content: center;
+            margin-top: 150px;
+            grid-template-columns: 300px;
+            grid-template-rows: 30px;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 align="center">Welcome To Complaint Management System</h2>
+    <h2 align="center">User Login</h2>
+    <div class="Form">
+        <input type="text" placeholder="username" name="username" id="username">
+        <input type="password" placeholder="password" name="password" id="password">
+        <button onclick="login()">Login</button>
+        <button onclick="adminlogin()">Admin Login </button>
+    </div>
+    
+    <script>
+        function login() {
+            // Retrieve username and password values
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if username and password are correct
+            if (username === "user1" && password === "user123") {
+                // Redirect to the trial.html page
+                window.location.href = "cms_user_dashboard.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+        function adminlogin()
+        {
+            window.location.href="./admin_panel.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Delivery Delays</title>
+
+    <style>
+        body{
+          background-color: darkgray;
+        }
+          .centerlist
+          {
+              display: grid;
+              gap:20px;
+              margin-top: 40px;
+              margin-right: 60px;
+          }
+          .complaints
+          {
+          margin-top: 50px;
+  
+          }
+          .container{
+            
+            display: flex;
+            justify-content:space-around;
+            /*border:solid black 1px;*/
+          }
+         a{
+          padding:15px;
+          text-decoration: none;
+         }
+         /*a:hover{
+          color:red;
+         }*/
+        
+        
+         .header{
+                  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                  background-color:lightgray;
+                  display:flex;
+                  justify-content: space-between;
+              }
+              .header a{
+                  text-decoration: none;
+                  font-size: 20px;
+                  padding-top: 30px;
+                  padding-right: 60px;
+                  flex-grow: 1;
+                  color: purple;
+              }
+              a:hover{
+                  color:blue;
+              }
+              .header h1{
+                 
+                  font-weight: 700;
+                  flex-grow: 8;
+                  padding-left:20px;
+              }
+         
+      </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>COMPLAINT MANAGEMENT SYSTEM</h1>
+    </div>
+
+    <button onclick="fetchComplaint()" style="margin-top: 100px; margin-left: 500px;">Fetch Delivery Delays</button>
+    <p id="complaintDisplay"></p>
+    
+    <script>
+        function fetchComplaint() {
+            // Retrieve the saved complaint from local storage
+            var savedComplaint = localStorage.getItem("delivery_delay_complaint");
+            
+            // Check if a complaint is saved
+            if (savedComplaint) {
+                // Display the saved complaint
+                document.getElementById("complaintDisplay").textContent = savedComplaint;
+            } else {
+                // If no complaint is saved, display a message
+                document.getElementById("complaintDisplay").textContent = "No delivery delays complaints saved.";
+            }
+        }
+    </script>
+</body>
+</html>

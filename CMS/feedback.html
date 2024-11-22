@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Feedback</title>
+    <style>
+          body{
+                
+                background-color:darkgray;
+            }
+            .area {
+                display: grid;
+                margin-left: 465px;
+                margin-top: 30px;
+                height: 300px;
+                width: 500px;
+                border-radius: 10px;
+            }
+            .area1 {
+                display: grid;
+            }
+            .buttonsize {
+
+            
+                margin-top: 30px;
+                margin-left: 650px;
+                height: 40px;
+                width: 120px;
+                border-radius: 5px; 
+            }
+            .header{
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+                background-color:lightgray;
+                display:flex;
+                justify-content: space-between;
+            }
+            .header a{
+                text-decoration: none;
+                font-size: 20px;
+                padding-top: 30px;
+                padding-right: 60px;
+                flex-grow: 1;
+            }
+            a:hover{
+                color:blue;
+            }
+            .header h1{
+               
+                font-weight: 700;
+                flex-grow: 8;
+                padding-left:20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>COMPLAINT MANAGEMENT SYSTEM</h1>
+            <a href="">PROFILE</a>
+            <a href="cms_user_dashboard.html">CATEGORY</a>
+            </div>
+        <br>
+        <br> 
+    <center><h3>Report Feedback</h3></center>
+    <div class="area1">
+        <textarea id="feedbackText" class="area" placeholder="Write your Feedback"></textarea>
+        <button class="buttonsize" onclick="submitFeedback()">Submit Feedback</button>
+    </div>
+
+    <script>
+        function submitFeedback() {
+            // Retrieve the value of the textarea
+            var feedback = document.getElementById("feedbackText").value;
+            
+            // Check if feedback is not empty
+            if (feedback.trim() !== "") {
+                // Store the feedback in local storage
+                localStorage.setItem("feedback", feedback);
+                
+                // Alert the user that the feedback has been submitted
+                alert("Feedback submitted successfully!");
+            } else {
+                // Alert the user if the textarea is empty
+                alert("Please write your feedback before submitting.");
+            }
+        }
+    </script>
+</body>
+</html>
